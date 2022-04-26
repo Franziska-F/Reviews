@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+h1,
+h4,
+p {
+  text-align: center;
+}
+h4 {
+  margin: 15px;
+}
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f8;
+}
+
+.container {
+  width: 80vw;
+  max-width: 1170px;
+  margin-bottom: 20px;
+}
+
+.content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header {
+  margin: 30px 0 70px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+}
+/* img-container hat die größe, die Bild haben soll,
+img hat die größe von 100% und füllt damit Bild, 
+img-container::before hat ebenfalls 100% und liegt genu hinter 
+dem container, bleibt daher beim verschieben immer an gleicher stelle
+*/
+.img-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img-container::before {
+  content: "";
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 20px;
+}
+
+#person-img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+}
+
+/*.blue-icon {
+  background-color: blue;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 340px;
+  z-index: 2;
+} */
+
+#heart {
+  margin: 15px 20px;
+}
+
+#review-para {
+  margin: 30px;
+}
+
+.btn-container {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.btn {
+  margin: 0 15px;
+}
+
+.surprise-btn {
+  margin: 20px auto;
+  display: block;
+}
