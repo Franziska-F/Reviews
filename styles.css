@@ -11,6 +11,7 @@ p {
 }
 h4 {
   margin: 15px;
+  text-transform: capitalize;
 }
 .main {
   min-height: 100vh;
@@ -32,11 +33,11 @@ h4 {
   padding: 20px;
 }
 
-.header {
-  margin: 30px 0 70px 0;
+.main-header {
+  margin: 30px 0 50px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 45px;
+  font-weight: 400;
 }
 /* img-container hat die größe, die Bild haben soll,
 img hat die größe von 100% und füllt damit Bild, 
