@@ -56,11 +56,11 @@ const btnRight = document.querySelector(".arrow-right");
 
 const btnLeft = document.querySelector(".arrow-left");
 
-const btnSurprise = document.querySelector(".suprise-btn");
+const btnSurprise = document.querySelector(".surprise-btn");
 
 // set staring item
 
-let currentItem = 2; //first item in array
+let currentItem = 2; //first item in array, is global var and all the functions below accsess it
 
 // load inital item
 
@@ -73,3 +73,29 @@ function displayData() {
   job.textContent = item.job;
   para.textContent = item.text;
 }
+
+//show next person
+
+btnRight.addEventListener("click", function () {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  displayData();
+});
+
+btnLeft.addEventListener("click", function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  displayData();
+});
+
+// random Number for suprpise me button
+
+btnSurprise.addEventListener("click", () => {
+  currentItem = Math.floor(Math.random() * reviews.length);
+
+  displayData();
+});
